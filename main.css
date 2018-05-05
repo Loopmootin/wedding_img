@@ -1,0 +1,33 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*-------------UPLOAD FORM------------*/
+
+/*---------------HEADER--------------*/
+
+.jumbotron {
+    height: 20vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.jumbotron h1 {
+    width: 100%;
+    text-align: center;
+}
+
+/*--------------CAROUSEL---------------*/
+
+.carousel {
+    background: #222;
+}
+
+.carousel-item {
+    height: 80vh;
+}
+
+.carousel-item img {
+    margin: 0 auto;
+}
