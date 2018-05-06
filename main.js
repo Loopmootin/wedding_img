@@ -1,5 +1,12 @@
 
 $(document).ready(function (e) {
+
+    $('#file').on('change', function () {
+        var fileName = '';
+        fileName = $(this).val();
+        $('#file-selected').html(fileName);
+    });
+
     $("#uploadimage").on('submit', (function (e) {
         e.preventDefault();
         $("#message").empty();

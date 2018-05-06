@@ -2,7 +2,6 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/*-------------UPLOAD FORM------------*/
 
 /*---------------HEADER--------------*/
 
@@ -16,7 +15,16 @@ body {
 .jumbotron h1 {
     width: 100%;
     text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
 }
+
+@media (max-width:450px) {
+    .jumbotron h1 {
+        font-size: 40px;
+    }
+}
+
 
 /*--------------CAROUSEL---------------*/
 
@@ -28,6 +36,65 @@ body {
     height: 80vh;
 }
 
+@media (max-width:850px) {
+    .carousel-item {
+        height: 40vh;
+    }
+}
+
 .carousel-item img {
     margin: 0 auto;
+}
+
+
+/*-------------UPLOAD FORM------------*/
+
+.uploadimage {
+    background: #e9ecef;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.uploadimage input[type="file"] {
+    display: none;
+}
+
+.custom-file {
+    background: #444;
+    color: #fff;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.uploadimage input[type=submit] {
+    background: #444;
+    color: #fff;
+    border-radius: 4px;
+    padding: 5px 10px;
+    border: none;
+}
+
+
+/*-------------SMALLIMG------------------*/
+
+.uploadedImg {
+    display: inline-block;
+}
+
+.preview-img {
+    height: auto;
+    width: 400px;
+    margin: 10px;
+}
+
+@media (max-width:850px) {
+    .uploadedImg {
+        display: block;
+    }
+
+    .preview-img {
+        height: auto;
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
 }

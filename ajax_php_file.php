@@ -24,7 +24,7 @@
             $sourcePath = $_FILES['file']['tmp_name']; // Storing source path of the file in a variable
             $targetPath = "img/".$_FILES['file']['name']; // Target path where file is to be stored
             move_uploaded_file($sourcePath,$targetPath) ; // Moving Uploaded file
-            echo "<span id='success'>Image Uploaded Successfully...!!</span><br/>";
+            echo "<span id='success'>Success!!</span><br/>";
 
             require_once('db_con.php');
             
@@ -33,7 +33,7 @@
             $stmt->bind_param('is', $id, $target_file);
             $stmt->execute();
             if ($stmt->affected_rows > 0){
-                echo 'Filedata added to the database :-)';
+                //echo 'Filedata added to the database :-)';
             } else {
                 echo 'Could not add the file to the database';
             }
