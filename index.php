@@ -94,7 +94,7 @@
 						</button>
 					</div>
 					<div class="modal-body">
-						<img id="my-img<?=$id?>" src="<?=$url?>" class="preview-img"/>
+						<img id="my-img<?=$id?>" src="<?=$url?>" class="modal-img"/>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
