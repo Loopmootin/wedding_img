@@ -7,6 +7,12 @@ $(document).ready(function (e) {
         $('#file-selected').html(fileName);
     });
 
+    function delayClear() {
+        $("#message").empty();
+        $("#file").empty();
+        $("#file-selected").empty();
+    }
+
     $("#uploadimage").on('submit', (function (e) {
         e.preventDefault();
         $("#message").empty();
@@ -22,6 +28,10 @@ $(document).ready(function (e) {
                 $("#message").html(data);
             }
         });
+        setTimeout(delayClear, 2000);
     }));
+
+    
+
 });
 

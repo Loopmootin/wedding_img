@@ -64,6 +64,7 @@ body {
     color: #fff;
     border-radius: 4px;
     padding: 5px 10px;
+    cursor: pointer;
 }
 
 .uploadimage input[type=submit] {
@@ -72,24 +73,29 @@ body {
     border-radius: 4px;
     padding: 5px 10px;
     border: none;
+    cursor: pointer;
 }
 
 
-/*-------------SMALLIMG------------------*/
+/*-------------SMALL IMG------------------*/
 
 .uploadedImg {
     display: inline-block;
+    width: 30%;
+    margin: 10px 1.5%;
 }
 
 .preview-img {
     height: auto;
-    width: 400px;
-    margin: 10px;
+    width: 100%;
+    cursor: pointer;
 }
 
 @media (max-width:850px) {
     .uploadedImg {
         display: block;
+        width: 90%;
+        margin: 10px auto;
     }
 
     .preview-img {
@@ -97,4 +103,14 @@ body {
         width: 100%;
         margin: 0 0 10px 0;
     }
+}
+
+
+/*-------------MODAL------------------*/
+
+.modal-dialog {
+    width: auto;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }

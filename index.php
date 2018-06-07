@@ -63,13 +63,14 @@
 		<div id="selectImage">
 			<label>Her kan du uploade et nyt billede!</label>
 			<input type="file" name="file" id="file" required /><br />
-			<label for="file" class="custom-file">Upload Billede</label><br />
+			<label for="file" class="custom-file">Vælg Billede</label><br />
 			<span id="file-selected"></span><br />
 			<input type="submit" value="Upload" class="submit" />
 		</div>
+		<div id="message"></div>
 	</form>
 
-	<div id="message"></div>
+	
 
 	<?php
 	require_once('db_con.php');
@@ -81,7 +82,25 @@
 
     while($stmt->fetch()){?>
             <div class="uploadedImg">
-                <img src="<?=$url?>" class="preview-img" />
-            </div>
-    <?php }?>
+				<img id="my-img<?=$id?>" src="<?=$url?>" class="preview-img" data-toggle="modal" data-target="#exampleModal<?=$id?>" />
+			</div>
+			
+			<div class="modal fade" id="exampleModal<?=$id?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<img id="my-img<?=$id?>" src="<?=$url?>" class="preview-img"/>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+					</div>
+				</div>
+			</div>
+	<?php }?>
 </html>
