@@ -89,6 +89,8 @@ body {
     height: auto;
     width: 100%;
     cursor: pointer;
+    max-width: 450px;
+    max-height: 450px;
 }
 
 @media (max-width:850px) {
