@@ -28,10 +28,16 @@ $(document).ready(function (e) {
                 $("#message").html(data);
             }
         });
-        setTimeout(delayClear, 2000);
+        setTimeout(delayClear, 3000);
     }));
 
-    
+    var imageCount = 6;
+    $("#show-more").click(function () {
+        imageCount = imageCount + 3;
+        $("#image-container").load("load-images.php", {
+            imageNewCount: imageCount
+        });
+    });
 
 });
 

@@ -119,5 +119,23 @@ body {
 
 .modal-img {
     max-width: 100%;
+    max-height: 90vh;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+/*-------------MORE IMAGES------------------*/
+
+.show-more {
+    background: #444;
+    color: #fff;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    margin: 10px auto;
+    display: block;
 }
